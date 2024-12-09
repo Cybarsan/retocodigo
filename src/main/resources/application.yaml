@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/retoseek2024
+    username: retoseek
+    password: seek2024
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  security:
+    jwt:
+      secret: secretSeek#2024
+      expiration: 3600000 # 1 hora en milisegundos
+
+flyway:
+  locations: classpath:db/migration
